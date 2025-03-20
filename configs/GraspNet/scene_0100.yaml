@@ -1,0 +1,21 @@
+scene: scene_0100
+inherit_from: configs/GraspNet/graspnet.yaml
+config_path: configs/GraspNet/scene_0100.yaml
+data:
+  input_folder: /data/graspnet/scenes/scene_0100/realsense
+  output: output/GraspNet/scene_0100_nbv/
+mapping:
+  keyframe_every: 1
+  mesh_freq: 1
+  vis_freq: 100
+  vis_inside_freq: 100
+  iters_first: 150
+  iters: 50
+  ckpt_freq: 100
+  no_log_on_first_frame: False
+rendering:
+  n_stratified: 32
+  n_importance: 8
+
+model:
+  grasp_output: online

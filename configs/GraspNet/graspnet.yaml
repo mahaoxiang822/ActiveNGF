@@ -1,0 +1,64 @@
+dataset: 'graspnet'
+project_name: "ESLAM_graspnet"
+verbose: True
+tracking:
+  vis_freq: 200
+  ignore_edge_W: 100
+  ignore_edge_H: 100
+  pixels: 1500
+  iters: 40
+  vis_inside_freq: 40
+  gt_camera: True
+planes_res:
+  coarse: 0.05
+  fine: 0.005
+  bound_dividable: 0.05
+c_planes_res:
+  coarse: 0.05
+  fine: 0.005
+mapping:
+  ckpt_freq: 500
+  joint_opt: False
+  keyframe_every: 20
+  every_frame: 1
+  mapping_window_size: 10
+  pixels: 1000
+  pixels_based_on_color_grad: 0
+  iters_first: 100
+  iters: 15
+  w_graspness: 1
+  lazy_start: False
+  color_refine: False
+  min_iter_ratio: 0.05
+  bound: [[-0.5,0.5],[-0.5,0.5],[-0.01,0.3]]
+  marching_cubes_bound: [[-0.5,0.5],[-0.5,0.5],[-0.01,0.3]]
+  mesh_freq: 50
+  vis_freq: 50
+  vis_inside_freq: 5
+  no_mesh_on_first_frame: False
+meshing:
+  level_set: 0
+  resolution: 0.005
+  eval_rec: False
+  clean_mesh: True
+  depth_test: False
+  mesh_coarse_level: False
+  clean_mesh_bound_scale: 1.02
+  get_largest_components: False
+  color_mesh_extraction_method: direct_point_query
+  remove_small_geometry_threshold: 0.001
+cam:
+  H: 720
+  W: 1280
+  fx: 927.1697387695312
+  fy: 927.3668823242188
+  cx: 651.3150634765625
+  cy: 349.621337890625
+  png_depth_scale: 1000.0
+  crop_edge: 0
+model:
+  c_dim: 32
+  truncation: 0.04
+  grasp_output: offline
+  fusion_plane: False
+grasp_checkpoint: 'ckpts/graspness.tar'
