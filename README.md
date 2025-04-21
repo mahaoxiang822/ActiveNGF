@@ -31,7 +31,7 @@ python setup.py install
 Download the pretrained graspness prediction model from [Google Drive](https://drive.google.com/file/d/1OswUcXVJv_LAgyyNt_KjfOPhIE4LEyk7/view?usp=sharing) and put it under
 ```
 ckpts/
----|graspnet.pth
+---|graspness.tar
 ```
 ## Run
 Using the scene config file in `config/` to run the pipeline. As an example, to run ActiveNGF on for the `scene_0100`, run: 
